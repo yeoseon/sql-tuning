@@ -45,3 +45,9 @@ ResultSet rs = st.executeQuery();
 ```aidl
 SELECT * FROM CUSTOMER WHERE LOGIN_ID = :1
 ```
+
+# Table Full Scan VS Index Range Scan
+
+1. Table Full Scan  
+-  
+2. Index Range Scan  
