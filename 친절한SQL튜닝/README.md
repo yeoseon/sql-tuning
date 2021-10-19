@@ -46,7 +46,7 @@ ResultSet rs = st.executeQuery();
 SELECT * FROM CUSTOMER WHERE LOGIN_ID = :1
 ```
 
-# Table Full Scan VS Index Range Scan
+## # Table Full Scan VS Index Range Scan
 
 1. Table Full Scan  
 - 테이블에 속한 블록 전체를 읽는다.  
