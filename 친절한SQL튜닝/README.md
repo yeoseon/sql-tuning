@@ -49,5 +49,13 @@ SELECT * FROM CUSTOMER WHERE LOGIN_ID = :1
 # Table Full Scan VS Index Range Scan
 
 1. Table Full Scan  
--  
+- 테이블에 속한 블록 전체를 읽는다.  
+- 한번에 많은 데이터를 처리하는 집계용 SQL과 배치 프로그램에서는 Table Full Scan을 쓰는 것이 더 빠를 수 있다.  
+- 시퀀셜 액세스와 Multiblock I/O 방식  
+- 스토리지 스캔 성능이 좋아지면 성능도 좋아짐  
+
 2. Index Range Scan  
+- 인덱스에서 일정량을 스캔하면서 얻은 ROWID로 테이블 레코드를 찾아간다.  
+- 큰 테이블에서 소량 데이터를 검색할 때는 반드시 인덱스를 이용  
+- 랜덤 액세스와 Single Block I/O 방식  
+- 스토리지 스캔 성능이 좋아져도 성능은 아주 조금만 좋아짐  
